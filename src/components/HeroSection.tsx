@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Home, Smartphone, Wifi, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/homeflow-hero.jpg";
 
 export const HeroSection = () => {
@@ -40,10 +41,12 @@ export const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg px-8 py-6">
-                <Smartphone className="w-5 h-5 mr-2" />
-                Ξεκίνα Τώρα
-              </Button>
+              <Link to="/dashboard">
+                <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-lg px-8 py-6">
+                  <Smartphone className="w-5 h-5 mr-2" />
+                  Ξεκίνα Τώρα
+                </Button>
+              </Link>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 border-primary/30 hover:border-primary">
                 <Home className="w-5 h-5 mr-2" />
                 Δες Demo
